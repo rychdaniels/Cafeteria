@@ -1,0 +1,429 @@
+/* las texturas se desrcagaron de: https://www.toptal.com */
+/* Fuente tomada de google fonts y que usará el sitio */
+@font-face{
+    font-family: "Caslon";
+    src: url('../fonts/LibreCaslonText-RegularItalic.ttf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Caslon",Arial, Helvetica, sans-serif;
+    font-size:16px;
+}
+
+/* Emepzamos por el contendor que esta conteniendo todo el sitio web */
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;/*Centra el sitio web*/
+    overflow: hidden;
+}
+
+/* ----- ----- ------ ------ HEADER ----- ----- ----- ------*/
+
+/* Nuestro header tendra las siguientes configuraciones */
+header{
+    width: 100%;/*Ocupara el 100% de ancho*/
+    background: url('../img/bg.jpg') #281a0c;/*De fondo tendra un color y la imagen*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;/*Ese fondo estara centrado*/
+
+    
+}
+/* En este contenedor esta la imagen */
+header .contenedor{
+    position: relative;
+    height: 700px;/*Le damos un alto para que se pueda ver la imagen*/
+}
+
+/* En esta parte esta el menu de navegacion */
+header .menu{
+    width: 100%;
+    text-align: right;/*Alineado a la derecha*/
+
+}
+
+/* Aqui estan los enlaces */
+header .menu a{
+    
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300px;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Cuando se pase por encima de algun enlace el texto se subrayara*/
+header .menu a:hover{
+    text-decoration: underline;
+}
+
+
+/* Aqui emepzamos a editar los textos que estan en el header*/
+header .textos{
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+}
+/* Nombre del cafe */
+header .textos .nombre{
+    font-size: 65px;
+    font-weight: 600;
+}
+
+/* La marca del cafe es en esta RychDaniels */
+header .textos .nombre span{
+    font-weight: 300;
+}
+/* Editamos el h3 que se encuentra debajo del eslogan */
+header .textos h3{
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* ----- ----- ------ ------ MAIN ----- ----- ----- ------*/
+
+/* Ponemos una textura de fondo */
+.main{
+    background: url('../img/bg-textura.png');
+    background-repeat: repeat;
+}
+
+/* Comenzamos a dar estilos al elemento acerca-de */
+.main .acerca-de .contenedor{
+    overflow: visible;
+    position: relative;/*Para que el texto quede por encima de la foto*/
+
+}
+
+/* Editamos las dimensiones del contenedor de la imagen */
+.main .acerca-de .foto{
+    /* Le asignamos el 80% ya que el otro 20% lo
+       ocupara el texto del elemento acerca-de*/
+    width: 80%;
+    position: absolute;/*Para que la foto que por debajo debajo del acerca-de*/
+    left: 0;
+    top: -50px;
+    z-index: 0;/*Tambien para que la foto este por debajo*/
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);/*Sombra de la foto*/
+    
+}
+/* Agregamos caracteristicas para la posicion de la imagen */
+.main .acerca-de .foto img{
+    vertical-align: top;
+    width: 100%;
+}
+
+/* Este es el contenedor del acerca-de */
+.main .acerca-de article{
+    background: #ffffff;
+    padding: 40px;
+    width: 50%;
+    position: relative;/*Nos permite poner el acerca-de por encima de la foto*/
+    top: 500px;/*A que altura esta el texto de acerca-de*/
+    z-index: 1;/*Para que el texto este por encima de la foto*/
+    float: right;/*Alineacion hacia la derecha*/
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);/*Sombra del elemento*/
+}
+
+/* Enzabezado del acrca-de */
+.main .acerca-de article h3{
+    font-size: 40px;
+    font-weight: 300px;
+    margin-bottom: 40px;
+}
+
+/* Parrafo(texto) del acerca-de */
+.main .acerca-de article p{
+    line-height: 28px;
+    margin-bottom: 15px;  
+}
+
+
+/* ----- ----- ------ ------ MENU DE COMIDA ----- ----- ----- ------*/
+
+.main .menu {
+    /* Para que el menu se muestre por debajo del acerca-de */
+    padding-top: 555px;
+    padding-bottom: 50px;
+}
+
+.main .menu .titulo{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Se le aplica a menu y menu2 por que son dos elementos diferentes,
+con esto lo que se logra es una especie de marco, ya que esta un
+elemento encima de otro */
+.main .menu .contenedor-menu,
+.main .menu .contenedor-menu2{
+    border: 1px solid #000000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+/* Esto corresponde a bebidas y comida */
+.main .menu article{
+    width: 50%;
+    float: left;/*Para lograr dos filas y mostrar bebidas y comida en filas diferentes*/
+    padding: 20px;
+}
+
+/* Estilos al texto 'de comer' y 'de tomar */
+.main .menu .categoria{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Corresponde al area de cada platillo */
+.main .menu .platillo{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #000;/*Le agregamos un separador a cada platillo*/
+    overflow: hidden;/*Si hay contenido que no alcance a mostrarse lo ocultara*/
+}
+
+/* Esto es para los nombres de cada platillo */
+.main .menu .nombre{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;/*Los colocamos hacia la izquierda*/
+}
+
+/* Para el precio de los platillos */
+.main .menu .precio{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right;/*Los colocamos hacia la derecha*/
+}
+/* La descripcion de los platillos */
+.main .menu .descripcion{
+    font-size: 16px;
+    color: #676767;/*Para que se vea mas desvanecido*/
+    clear: both;/*Ayuda para la visualizacion*/
+}
+
+
+/* ----- ----- ------ ------ GALERIA ----- ----- ----- ------*/
+
+.main .galeria{
+    overflow: hidden;
+}
+
+.main .galeria .foto{
+    width: 25%;
+    float: left;
+}
+
+.main .galeria .foto img{
+    width: 100%;
+    vertical-align: top;
+    opacity: .6;
+}
+
+.main .galeria .foto img:hover{
+    opacity: 1;
+    -webkit-transition:all .3s ease ;
+    -o-transition:all .3s ease ;
+    transition:all .3s ease ;
+}
+
+
+/* ----- ----- ------ ------ UBICACION  ----- ----- ----- ------*/
+
+/* Propiedades que tendra el contenedor de la ubicacion */
+.main .ubicacion{
+    background: #ffff;
+    padding: 60px 0px;
+    overflow: hidden;
+
+}
+
+/* Estilos para el titulo */
+.main .ubicacion .titulo{
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;    
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Estilos para la direccion */
+.main .ubicacion .direccion{
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+/* Estilos para los horarios */
+.main .ubicacion .horarios{
+    float: right;
+    width: 50%;
+    text-align: right;
+    
+}
+
+.main .ubicacion .direccion .calle{
+    margin-bottom: 15px;
+}
+
+/* Encabezado con la palabra 'Horario' */
+.main .ubicacion .horarios h4{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+/* El horario de fin de semana compartira su contenedor con el horario
+entre semana, por lo tanto ambos ocuparan el 50% del espacio disponible */
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+/* Damos estilos al area del mapa */
+.main .mapa{
+    width: 100%;/*Ocupara el 100% de su contenedor*/
+    overflow: hidden;
+}
+/* Debemos modificar el iframe para que no se deforme el mapa */
+.main .mapa iframe{
+    width: 100%;
+    max-height: 600px;
+}
+
+
+/* ----- ----- ------ ------ FOOTER  ----- ----- ----- ------*/
+footer{
+    background: #000;
+}
+
+footer .copyright{ 
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0px;/*15px arriba y abajo. 0px a los lados*/
+}
+
+
+/* ----- ----- ------ ------ MEDIAQUERIES  ----- ----- ----- ------*/
+/* Esto es para la parte de dispositivos moviles */
+
+/* Cuando la pantalla sea menor a 800px sucederan los siguientes eventos */
+@media screen and (max-width:800px){
+    
+    /* Para el header */
+    header .contenedor{
+        position:static;
+        height: auto;/*La altura sera automatica*/
+    }
+    
+    /*Los textos del header*/
+    header .textos{
+        position: static;
+        margin: 100px 0;
+    }
+
+    /* Menu de navegacion */
+    header .menu{
+        text-align: center;
+    }
+
+    /* Los enlaces del menu de navegacion */
+    header .menu a{
+        margin: 10px 20px;
+    }
+    
+    /*El nombre de la cafeteria */
+    header .textos .nombre{
+        font-size: 30px;
+
+    }
+    /*Para la decripcion despues del nombre de la cafeteria*/
+    header .textos h3{
+        font-size: 18px;
+    }
+
+    /* La seccion de acerca-de */
+    .main .acerca-de .foto {
+         width: 100%;
+         position: relative;
+    }
+
+    /* El texto de la seccion acerca-de */
+    .main .acerca-de article{
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);/*Esto ayudara para hacer el efecto parallax*/
+    }
+
+    /* Para que el menu no aparezca tan separado del aerca-de */
+    .main .menu{
+        padding-top: 300px;
+    }
+
+    /* El texto que tiene la seccion del menu */
+    .main .menu article{
+        width: 100%;
+    }
+
+    /* Para la seccion de la galeria */
+    .main .galeria .foto{
+        width: 50%;
+    }
+
+    /* Para el mapa */
+    .main .mapa{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Si el telefono o la pantalla son menores a 400px */
+@media screen and (max-width:400px){
+    
+    /* Solo modificamos el encabezado del texto en la seccion de acerca-de */
+    .main .acerca-de article h3{
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    /* Tambien modificamos el tamaño de la fuente sólo para el 
+    nombre y el precio de cada platillo del menu */
+    .main .menu article .nombre,
+    .main .menu article .precio{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    /* Modificamos el margen inferior de la direccion para que no
+    quede tan pegado */
+    .main .ubicacion .direccion{
+        margin-bottom: 15px;
+    }
+    /* Finalmente cambiamos el ancho y alineacion de la direccion y
+    los horarios para que se vean mejor en una pantalla pequeña */
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios{
+        width: 100%;
+        text-align: center;
+    }
+}
