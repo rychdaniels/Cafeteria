@@ -1,0 +1,2 @@
+# Cafeteria
+Esta pagina web posee animaciones hechas con ayuda de Jquery, el nombre de la animación es Parallax. Posee un área en la cual se puede agregar una explicación acerca de la cafeteria. Posee una sección en donde se puede visualizar el menú de dicha cafeteria, tambien contiene una galeria de los productos que ofrece la cafeteria. Por último se puede establecer la ubicación de la cafeteria con ayuda de Google Maps, de esta manera resultara más fácil eoncontrar la ubicación del lugar.
